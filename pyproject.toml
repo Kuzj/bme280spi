@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bme280spi"
-version = "0.1.0"
+version = "0.2.0"
 description = "Library for BME280 sensor through spidev"
 authors = ["Kuzj <kuzj99@gmail.com>"]
 license = "MIT"
