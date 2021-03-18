@@ -28,9 +28,16 @@ def main() -> None:
     args = parser.parse_args()
     device = BME280(args.spi_bus, args.spi_dev)
     print(
-        f"""Temperature: {device.temperature}
-    Humidity: {device.humidity}
-    Pressure: {device.pressure}"""
+        (
+            '{{"bus": {0}, "device": {1}, "temperature": {2}, '
+            '"humidity": {3}, "pressure": {4}}}'
+        ).format(
+            args.spi_bus,
+            args.spi_dev,
+            device.temperature,
+            device.humidity,
+            device.pressure,
+        )
     )
 
 
